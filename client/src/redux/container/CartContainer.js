@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
 import Cart from '../../components/Cart';
 import CartItem from '../../components/CartItem';
 import * as Message from '../constant/Message';
 import CartResult from '../../components/CartResult';
-import Product from '../../components/Product';
+
 import { actRemoveProductInCart, changeMessage,actUpdateProductInCart, actMinusProductInCart } from '../actions/index';
 
 class CartContainer extends Component {
@@ -46,10 +45,10 @@ class CartContainer extends Component {
 
   showTotalMoney = (cart) =>
   {
-    var result = null;
+    
     if(cart.length > 0)
     {
-     return  result = <CartResult cart = {cart}/>
+     return  <CartResult cart = {cart}/>
     }
     
   }

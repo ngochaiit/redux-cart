@@ -36,7 +36,7 @@ const cart = (state = initialState, action) =>
         
 
         return [...state];
-
+        
         case types.DELETE_PRODUCT:
         index = findProductInCart(state,SanPham);
         if(index !== -1)
@@ -48,7 +48,7 @@ const cart = (state = initialState, action) =>
 
         console.log(state);
 
-
+        break;
         case types.UPDATE_PRODUCT_IN_CART:
         index = findProductInCart(state,SanPham);
         if(index !== -1)
@@ -56,7 +56,7 @@ const cart = (state = initialState, action) =>
             state[index].quantity += 2;
         }
         localStorage.setItem('CART', JSON.stringify(state));
-
+        break;
         case types.MINUS_PRODUCT_IN_CART:
         index = findProductInCart(state,SanPham);
         if(index !== -1)
@@ -64,7 +64,7 @@ const cart = (state = initialState, action) =>
             state[index].quantity -= 1;
         }
         localStorage.setItem('CART', JSON.stringify(state));
-        
+        break;
         default: return [...state];
     }
 }

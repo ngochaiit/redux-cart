@@ -33,11 +33,11 @@ class App extends Component {
             <div className="btn-group radio-group" data-toggle="buttons">
                 <label className="btn btn-sm btn-primary
                     btn-rounded waves-effect waves-light" onClick = {() => this.UpdateQuantity(item.product, item.quantity)}>
-                    <a>+</a>
+                    <a href ="/">+</a>
                 </label>
                 <label className="btn btn-sm btn-primary
                     btn-rounded waves-effect waves-light" onClick = {() => this.MinusUpdateQuantity(item.product, item.quantity)}>
-                    <a>-</a>
+                    <a href ="/">-</a>
                 </label>
             </div>
         </td>
@@ -95,8 +95,8 @@ class App extends Component {
 
   showTotalPrice = (price, quantity) =>
   {
-      let result = null;
-    return result = price * quantity;
+      
+    return  price * quantity;
   }
 }
 

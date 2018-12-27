@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Products from '../../components/Products';
 import Product from '../../components/Product';
-import PropTypes from 'prop-types';
 import {actAddToCart, changeMessage} from '../../redux/actions/index'
 class ProductsContainer extends Component {
   render() {
